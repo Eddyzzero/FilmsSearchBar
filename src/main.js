@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import './css/input.css'
+import App from './components/seachBar.vue'
+import './css/output.css'
 
 createApp(App).mount('#app')
