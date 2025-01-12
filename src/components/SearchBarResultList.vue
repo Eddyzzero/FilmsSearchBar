@@ -1,10 +1,8 @@
 <template>
-    <div class=" mt-10">
+    <div class="flex flex-wrap space-x-4">
     <SearchBarResultitem 
-    class=" text-zinc-400"
     v-for="(item, index) in items" :key="index">
       <template
-      class=" bg-gray-900 shadow-lg border-2 border-blue-950" 
       #default>{{ item }}
     </template>
     </SearchBarResultitem>
@@ -12,7 +10,7 @@
 </template>
 
 <script>
-import SearchBarResultitem from './SearchBarResultitem.vue';
+import SearchBarResultitem from './SearchBarResultItem.vue';
 
 export default {
   components: { SearchBarResultitem },

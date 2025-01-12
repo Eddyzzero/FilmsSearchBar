@@ -1,17 +1,25 @@
 <template>
 <div 
 id="app"
-class=" bg-gray-900 text-cyan-800 flex-col justify-items-center p-20 space-y-3">
-    <h1 class=" text-cyan-800 text-3xl font-bold uppercase">Application</h1>
+class="bg-gradient-to-r from-gray-800 via-blue-700 to-gray-900 text-cyan-800 flex-col justify-items-center p-20 space-y-3">
+    <h1 class=" text-white text-4xl font-bold uppercase">Application</h1>
     <h2 class=" pb-5 text-lg font-semibold text-zinc-100">Films à regarder une fois dans la vie</h2>
     <SearchBar  v-model="searchQuery" />
+    <hr class=" h-1 w-full">
     <SearchBarResultList :items="filtereditems" />
+</div>
+<hr class=" h-1 w-full">
+<div class="flex flex-col text-center justify-center p-4 text-zinc-100">
+    <p> Inspired by : 
+        <a target="_blank" class=" hover:text-gray-500" href="https://01streaming.tv/"> 1streaming</a>
+    </p>
+    <p> Jhon Florez 2025</p>
 </div>
 </template>
 
 <script>
 import SearchBar from "./components/SearchBar.vue"
-import SearchBarResultitem from "./components/SearchBarResultitem.vue"
+import SearchBarResultitem from "./components/SearchBarResultItem.vue"
 import SearchBarResultList from "./components/SearchBarResultList.vue"
 
 export default {
