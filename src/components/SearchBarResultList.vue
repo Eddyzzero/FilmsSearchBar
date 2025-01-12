@@ -1,25 +1,26 @@
 <template>
-    <ul>
-        <SearchBarResultItem
-        v-for="(item, index) in items"
-        :key="index"
-        :content="item"
-        />
-    </ul>
+    <div class=" mt-10">
+    <SearchBarResultitem 
+    class=" text-zinc-400"
+    v-for="(item, index) in items" :key="index">
+      <template
+      class=" bg-gray-900 shadow-lg border-2 border-blue-950" 
+      #default>{{ item }}
+    </template>
+    </SearchBarResultitem>
+  </div>
 </template>
 
 <script>
-import SearchBarResultItem from './SearchBarResultItem.vue';
+import SearchBarResultitem from './SearchBarResultitem.vue';
 
 export default {
-    props: {
-        items: {
-            type: Array, 
-            required: true,
-        },
+  components: { SearchBarResultitem },
+  props: {
+    items: {
+      type: Array,
+      required: true,
     },
-    components: {
-        SearchBarResultItem,
-    }
-}
+  },
+};
 </script>
